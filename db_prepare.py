@@ -6,7 +6,7 @@ db = mysql.connector.connect(
     user=config.db_username,
     passwd=config.db_password,
     port=config.db_port,
-    database=config.db_workbench
+    database=config.db_database
 )
 
 cursor = db.cursor()

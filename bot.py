@@ -280,7 +280,7 @@ def process_finish_task_step(message):
         db.commit()
 
         if task_status_current != 0:
-            bot.send_message(message.chat.id, "Congratulations!!!")
+            bot.send_message(message.chat.id, "Congratulations!!!", reply_markup=keyboard3())
 
 
 def keyboard():
@@ -318,13 +318,6 @@ def keyboard4():
     btn8 = types.KeyboardButton('Finish task')
     markup.add(btn8)
     return markup
-
-
-@bot.message_handler(commands=['clean'])
-def delete(message):
-    dez = "DELETE FROM users WHERE id>0"
-    cursor.execute(dez)
-    db.commit()
 
 
 bot.enable_save_next_step_handlers(delay=2)
