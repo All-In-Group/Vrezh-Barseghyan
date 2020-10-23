@@ -233,6 +233,8 @@ def task(message, msg_to_user="Would you like to get a new task?"):
 
 def process_get_task_step(message):
     task_status_current = check_task_status(message.chat.id)
+    if task_status_current == 2:
+        bot.send_message(message.chat.id, "There is no tasks for you yet.")
     if message.text != "Get task":
         task(message, "Invalid command,  try again.")
         return
