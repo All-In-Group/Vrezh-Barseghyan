@@ -133,3 +133,65 @@ print("11)")
 
 # Question 11: Write a code to extract each digit from an integer, in the reverse order
 
+
+def question_eleven(number):
+    while (number > 0):
+        digit = number % 10
+        number = number // 10
+        print(digit, end=" ")
+
+question_eleven(7536)
+print()
+print("---------------------------------------------")
+print("12)")
+
+# Question 12: Calculate income tax for the given income by adhering to the below rules
+
+def question_twelve(income):
+    taxPayable = 0
+    if income <= 10000:
+        taxPayable = 0
+        print("no tax to pay")
+    elif income <= 20000:
+        taxPayable += (income - 10000) * 10 / 100
+        print(f"tax {taxPayable}")
+    else:
+        taxPayable += 10000 * 10 / 100
+        taxPayable += (income - 20000) * 20 / 100
+        print((f"tax {taxPayable}"))
+
+question_twelve(10000)
+question_twelve(20000)
+question_twelve(30000)
+question_twelve(300000)
+print("---------------------------------------------")
+print("13)")
+
+# Question 13: Print multiplication table form 1 to 10
+def question_thirteen():
+    for v in range(1, 11):
+        for h in range(1, 11):
+            print(v * h, end=" ")
+        print("\t\t")
+
+question_thirteen()
+print("---------------------------------------------")
+print("14)")
+
+# Question 14: Print downward Half-Pyramid Pattern with Star (asterisk)
+
+def question_fourteen():
+    for i in range(6, 0, -1):
+        for j in range(0, i - 1):
+            print("*", end=' ')
+        print(" ")
+
+question_fourteen()
+print("---------------------------------------------")
+print("15)")
+
+def question_fiftenn(a, b):
+    answer = a ** b
+    return f"The answer is {answer}"
+
+print(question_fiftenn(4,4))
