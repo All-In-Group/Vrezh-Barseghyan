@@ -1,0 +1,114 @@
+print("1)")
+
+
+# Exercise Question 1: Create a function that can accept two arguments name and age and print its value
+
+def info(name, age):
+    print(name, age)
+
+
+info("Vrezh", 19)
+
+print("---------------------------------------------")
+print("2)")
+
+
+# Exercise Question 2: Write a function func1() such that it can accept a variable length of  argument and print all arguments value
+
+def func1(*args):
+    for i in args:
+        print(i)
+
+
+func1(20, 40, 60)
+func1(80, 100)
+
+print("---------------------------------------------")
+print("3)")
+
+
+# Exercise Question 3: Write a function calculation() such that it can accept two variables and calculate the addition and subtraction of it. And also it must return both addition and subtraction in a single return call
+
+def calculation(x, y):
+    res = x + y, x - y
+    return res
+
+
+res = calculation(40, 10)
+print(res)
+
+print("---------------------------------------------")
+print("4)")
+
+
+# Exercise Question 4: Create a function showEmployee() in such a way that it should accept employee name, and it’s salary and display both, and if the salary is missing in function call it should show it as 9000
+
+def showEmployee(name, salary=9000):
+    print(f"Emplyee {name} salary is: {salary}")
+
+
+showEmployee("Ben", 10000)
+showEmployee("Ben")
+
+print("---------------------------------------------")
+print("5)")
+
+
+# Exercise Question 5: Create an inner function to calculate the addition in the following way
+
+def outer(a, b):
+    def inner(a, b):
+        return a + b
+
+    answ = inner(a, b)
+    return answ + 5
+
+
+print(outer(5, 10))
+
+print("---------------------------------------------")
+print("6)")
+
+# Exercise Question 6: Write a recursive function to calculate the sum of numbers from 0 to 10
+
+def recur_sum(n):
+   if n <= 1:
+       return n
+   else:
+       return n + recur_sum(n-1)
+
+
+num = 10
+
+if num < 0:
+   print("Enter a positive number")
+else:
+   print("The sum is",recur_sum(num))
+
+print("---------------------------------------------")
+print("7)")
+
+# Exercise Question 7: Assign a different name to function and call it through the new name
+
+def displayStudent(name, age):
+    print(name, age)
+
+
+showStudent = displayStudent
+showStudent("Vrezh", 19)
+
+print("---------------------------------------------")
+print("8)")
+
+# Exercise Question 8: Generate a Python list of all the even numbers between 4 to 30
+
+print(list( range(4, 30, 2)))
+
+print("---------------------------------------------")
+print("9)")
+
+# Exercise Question 9: Return the largest item from the given list
+
+aList = [4, 6, 8, 24, 12, 2]
+
+print(max(aList))
