@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+
+    <h1>{{task.task}}</h1>
+    <form action="{{ task.id }}/update" method="post">
+
+            {% csrf_token %}
+            <input type="text" name="edit" id="edit">
+            <input type="submit" value="Update">
+        </form>
+    <form action="{{ task.id }}/delete" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete Task" name="delete" id="delete">
+    </form>
+    </form>
+
+    <a href="{% url 'index' %}">View Tasks</a>
+</body>
+</html>

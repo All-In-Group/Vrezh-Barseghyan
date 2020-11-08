@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+    <div>
+        <ul>
+            {% for task in tasks %}
+                <a href="{{task.id}}"><li>{{ task.task }}</li></a>
+                {% csrf_token %}
+            {% empty %}
+                <li>No tasks yet</li>
+            {% endfor %}
+
+        </ul>
+        <a href="{% url 'add' %}">Add Task</a>
+    </div>
+</body>
+</html>
