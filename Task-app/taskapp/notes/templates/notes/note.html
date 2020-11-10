@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Edit</title>
+    <link href="../static/style/styles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <h1>{{task.task}}</h1>
+<div class="every container">
+    <h1 class="title_add">Edit Task: {{task.task_title}}</h1>
     <form action="{{ task.id }}/update" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="desc" for="edit">Title</label>
+            <input class="form-control" id="edit" name="edit" placeholder="{{ task.task_title    }}" type="text">
+            <div class="form-group">
+                <label class="desc" for="description">Description</label>
+                <textarea class="form-control" id="description"
+                          name="description">{{ task.task_description }}</textarea>
+            </div>
+            <div>
+                <input class="btn btn-dark" type="submit" value="Update">
+                <a class="btn btn-secondary" href="{% url 'index' %}">View Tasks</a>
+            </div>
+            <div>
 
-            {% csrf_token %}
-            <input type="text" name="edit" id="edit">
-            <input type="submit" value="Update">
-        </form>
+            </div>
+        </div>
+    </form>
     <form action="{{ task.id }}/delete" method="post">
         {% csrf_token %}
-        <input type="submit" value="Delete Task" name="delete" id="delete">
+        <input class="btn btn-outline-danger" id="delete" name="delete" type="submit" value="Delete Task">
     </form>
-    </form>
-
-    <a href="{% url 'index' %}">View Tasks</a>
+</div>
 </body>
 </html>

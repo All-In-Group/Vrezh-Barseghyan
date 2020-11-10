@@ -3,16 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="../static/style/styles.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome</h1>
-        <form method="post">
-            {% csrf_token %}
-            <input type="text" name="task" id="task">
-            <input type="submit">
-        </form>
-        <a href="{% url 'index' %}">View Tasks</a>
-    </div>
+<div class="container">
+    <h1 class="title_add">Add a New Task</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label class="desc" for="task">Title:</label>
+            <input class="form-control" id="task" name="task" type="text">
+            <div class="form-group">
+                <label class="desc" for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+            <div>
+                <input class="btn btn-dark" type="submit" value="Add Task">
+                <a class="btn btn-secondary" href="{% url 'index' %}">View Tasks</a>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
 </html>

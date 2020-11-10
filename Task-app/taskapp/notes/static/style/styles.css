@@ -1,0 +1,31 @@
+#link {
+    float: right;
+}
+
+.title_add {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input_title {
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.all {
+    margin-top: 20px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.desc {
+    margin-top: 10px;
+}
+
+.button_margin {
+    margin-top: 10px;
+}
+
+.no_task {
+    text-align: center;
+}
