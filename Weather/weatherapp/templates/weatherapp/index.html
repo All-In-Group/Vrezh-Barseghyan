@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
 {% for i in cities %}
 <div>
-    {{ i }}
+    <ul class="list-group">
+       <a class="link" href="{{ forloop.counter0 }}">  <li class="list-group-item">{{ i }}<br>
+           </a></li>
+    </ul>
 </div>
-<a href="{{ forloop.counter0 }}">show</a>
+
 {% endfor %}
 
 
