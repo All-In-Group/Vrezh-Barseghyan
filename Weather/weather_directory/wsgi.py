@@ -1,5 +1,5 @@
 """
-WSGI config for Weather project.
+WSGI config for weather_directory project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Weather.Weather.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Weather.weather_directory.settings')
 
 application = get_wsgi_application()
