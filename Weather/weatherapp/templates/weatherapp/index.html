@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+
+{% for i in cities %}
+<div>
+    {{ i }}
+</div>
+<a href="{{ forloop.counter0 }}">show</a>
+{% endfor %}
+
+
+</body>
+</html>
